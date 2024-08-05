@@ -17,7 +17,8 @@
 
 
 import {create} from 'zustand';
-import {devtools, persist} from 'zustand/middleware';
+import {createJSONStorage, devtools, persist} from 'zustand/middleware';
+import { zustandStorage } from './mmkv';
 
 // Revision: (set((state) => {}) state is responsible for doing any manipulation to (courses: [],) this variable that you have created, because it is a store variable, and after that you are taking access of the state (set((state) => {}),
 //.. state will be responsible for giving you the most updated state of this variable (courses: [],) or any more variable that you have.
@@ -69,6 +70,7 @@ const useCourseStore = create(
     devtools(
         persist(courseStore, {
             name: 'courses',
+            storage: createJSONStorage(() => zustandStorage),
         })
     )
 )
