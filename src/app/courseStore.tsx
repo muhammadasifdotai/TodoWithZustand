@@ -4,7 +4,19 @@
 // Step2: Create a function 'courseStore' and in which we used 'set' method 
 // Step3: and store is created out of it. so all the values and all of this is actually going up here. We simply say that we want to use the (UseCourseStore) and this being created based on the (courseStore) that we created above. and this will storing in to the local storage.
 
-import create from 'zustand';
+// We learn how we put the information in the store, next step 'video 3' is that how we pull the information back from the store, also we need to learn how we can manipulate that information so that information is always updated in the store. 
+// In video 3: we have two goal.
+// ..i. how we can pull information from the store.
+// ..ii. how we can manipulate the information and make sure the store is updated.
+
+
+/// ..................... SUMMARAY .........................
+// STEP: 1: Install the package.
+// STEP: 2: Create store from the zustand. by 'courseStore'. We are manupulating the hooks of the zustand which is the set hook that we are using.
+// STEP: 3: In the create we added the 'persist(courseStore' and their name.
+
+
+import {create} from 'zustand';
 import {devtools, persist} from 'zustand/middleware';
 
 // Revision: (set((state) => {}) state is responsible for doing any manipulation to (courses: [],) this variable that you have created, because it is a store variable, and after that you are taking access of the state (set((state) => {}),
