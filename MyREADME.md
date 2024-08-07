@@ -1,3 +1,8 @@
+# Most Important Points for API: 
+* STEP: 1: First we get data from the `Backend`
+* STEP: 2: Then we save the data in the store, in the store in the initialState and in the initialState with the help of function.
+* STEP: 3: Then we export it and then import it used it whether we want.
+
 # Zustand:
 * In this We learn React Native State Management with Zustand, why not Redux or Redux Toolkit. Because of features and simplicity in the state management is awosome. In which things are easier. Zustand is production ready. 
 * All information are present in a single store or in a single place from where all take that information. 
