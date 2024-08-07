@@ -13,7 +13,7 @@ const AppNavigation = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {!userData ? (
+        {userData ? (
         <Stack.Screen name="LoginScreen" component={LoginScreen} options={{headerShown:false}}/>):
         (
         <Stack.Screen name="HomeScreen" component={HomeScreen} options={{headerShown:false}}/>

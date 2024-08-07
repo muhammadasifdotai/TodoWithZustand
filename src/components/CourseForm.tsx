@@ -58,7 +58,7 @@ const CourseForm = () => {
       <TouchableOpacity
         onPress={handleCourseSubmit}
         style={styles.formSubmitBtn}>
-        <Text>Add Course</Text>
+        <Text style={styles.text}>Add Course</Text>
       </TouchableOpacity>
     </View>
   );

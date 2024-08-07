@@ -12,20 +12,27 @@ const styles = StyleSheet.create({
   },
   formContainer: {
     flexDirection: 'row',
+    borderWidth: 1,
+    borderRadius: 10,
+    borderColor: 'white'
   },
   formInput: {
     padding: 12, 
-    borderWidth: 1,
-    borderColor: 'white',
+    color: 'white',
+    // borderWidth: 1,
+    // borderRadius: 10,
+    // borderColor: 'white',
     width: '70%', 
   },
   formSubmitBtn: {
     backgroundColor: 'cyan',
     padding: 12,
-    borderColor: 'cyan',
     color: '#fff',
-    fontSize: 16,
-    fontWeight: 'bold',
+    borderBottomRightRadius: 10,
+    borderTopRightRadius: 10,
+  },
+  text: {
+    color: 'white'
   },
   courseItem: {
     justifyContent: 'space-between',

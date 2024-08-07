@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import useAuthStore from "../app/authStore";
+import { signIn } from "../app/authApiService";
 
 export default function LoginScreen(): JSX.Element {
 
@@ -9,25 +10,17 @@ export default function LoginScreen(): JSX.Element {
     const [password, setPassword] = useState('');
 
     // hook
-    const { updatedUserData } = useAuthStore(state => state)
+    const {  } = useAuthStore(state => state)
 
     const handleLogin = async () => {
         console.log('handleLogin', 'asif')
         try {
-            let obj = {
+            const params = {
                 username: 'emilys',
                 password: 'emilyspass',
             }
-            console.log('obj:', obj)
-            const response = await fetch('https://dummyjson.com/auth/login', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(obj),
-            });
-
-            const data = await response.json();
-            console.log('data:', data)
-            updatedUserData(data);
+            console.log('obj:', params)
+           await signIn(params);
         } catch (error) {
             console.error('Error during login:', error);
         }
@@ -60,7 +53,7 @@ export default function LoginScreen(): JSX.Element {
 const styles = StyleSheet.create({
     main: {
         flex: 1,
-        backgroundColor: 'purple',
+        backgroundColor: 'gray',
         alignItems: 'center',
         justifyContent: 'center',
         paddingHorizontal: 20,

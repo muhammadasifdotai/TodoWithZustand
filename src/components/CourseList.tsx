@@ -31,6 +31,7 @@ const CourseList = () => {
 
   return (
     <FlatList
+      showsVerticalScrollIndicator= {false}
       data={courses}
       renderItem={renderItem}
       keyExtractor={(item, index) => index.toString()}
