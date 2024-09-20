@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import useAuthStore from "../app/authStore";
-import { signIn } from "../app/authApiService";
+import { signIn } from "../app/authApiServiceTest";
+// import { signIn } from "../app/authApiService";
+
 
 export default function LoginScreen(): JSX.Element {
 
